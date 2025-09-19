@@ -1,0 +1,19 @@
+name: lyra
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.12
+  - chromadb
+  - openai
+  - pillow
+  - tiktoken
+  - scipy
+  - opencv
+  - gymnasium
+  - imageio
+  - pybullet
+  - omegaconf
+  - transforms3d
+  - ffmpeg
+  - libvorbis

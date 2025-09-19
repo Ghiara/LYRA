@@ -1,0 +1,7 @@
+- [utils/base_examples.py](utils/base_examples.py) : the base set of examples a new agent is initialised with. A simple text file would probably have been a better choice.
+- [utils/cap_utils.py](utils/cap_utils.py) : the code to execute LLM-written code in an environment - involves adding learned skills to the environment
+- [utils/core_primitives.py](utils/core_primitives.py) : the base set of skills a new agent is initialised with.
+- [utils/core_types.py](utils/core_types.py) : types the agent should adhere to when generating code. In retrospect, this may have hampered the agents performance somewhat, as well as increasing initial engineering overhead slightly. For example, we introduce a 'Point3D' class, which could have also simply been represented as a numpy array – in order to use functions the agent is familiar with from pretraining to manipulate Point3Ds it needs to first convert to np array...
+- [utils/llm_utils](utils/llm_utils) : functions that call the openAI API, i.e. LLM calls
+- [utils/sample_tasks.py](utils/sample_tasks.py) : an example of a handwritten task initialisation.
+- [utils/task_and_store.py](utils/task_and_store.py) : wraps the Ravens Task class, both to enable a natural language based environment initialisation, and to enable storing/restoring of environment state from EnvironmentConfigurations.
