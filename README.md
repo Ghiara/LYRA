@@ -1,23 +1,41 @@
 # Growing with Your Embodied Agent: A Human-in-the-Loop Lifelong Code Generation Framework for Long-Horizon Manipulation Skills
 
-[![Python 3.6+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/release/python-3127/)
+[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/release/python-3127/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-orange.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
+<div align="center">
+
 Official implementation of **LYRA**: A **L**ifelong learning code s**Y**nthesis framework with human-in-the-loop for **R**obotic long-horizon skill **A**cquisition
 
-- [LYRA](#cap-options-todo)
-  - [1. Introduction](#1-introduction)
+#### [[Project Website]](https://ghiara.github.io/LYRA/) [[Paper]](docs/LYRA-v2.pdf)
+
+
+[Yuan Meng](https://github.com/Ghiara)<sup>1</sup>, [Zhenguo Sun](https://github.com/zhenshan-bing)<sup>2</sup>, [Max Fest]()<sup>1</sup>, [Xukun Li]()<sup>1</sup>,
+
+[Zhenshan Bing]()<sup>4,&dagger;</sup>, [Alois Knoll](https://www.ce.cit.tum.de/air/people/prof-dr-ing-habil-alois-knoll/)<sup>1</sup>.
+
+</div>
+
+<p align="center">
+<small><sup>1</sup>School of Computation, Information and Technology, Technical University of Munich, Germany</small>
+<br><small><sup>2</sup>Beijing Academy of Artificial Intelligence (BAAI), China</small>
+<br><small><sup>3</sup>State Key Laboratory for Novel Software Technology, Nanjing University, China</small>
+<small><br><sup>&dagger;</sup>To whom correspondence should be addressed; E-mail: bing@nju.edu.cn</small>
+</p>
+
+
+
+- [LYRA](#LYRA-todo)
+  - [1. Abstract](#1-abstract)
   - [2. Installation](#2-installation)
   - [3. Overview](#3-overview)
   - [4. Run the code with interaction](#4-run-the-code-with-interaction)
     - [4.1 Interact in the terminal](#41-interact-in-the-terminal)
-    - [4.2 Test pre-trained agent](#42-test-pre-trained-agent)
-    - [4.3 Teach your robot](#43-teach-your-robot)
+    - [4.2 Teach your robot](#42-tutorial-teach-your-robot)
+    - [4.3 Test pre-trained agent](#43-test-agent-with-pre-trained-skill-library)
   - [Repository Structure](#repository-structure)
-  - [Known Weaknesses](#known-weaknesses)
   - [Acknowledgements](#acknowledgements)
-  - [clis](#clis)
 
 ## 1. Abstract
 
@@ -98,7 +116,7 @@ python main.py --memory_dir "baseline"
 You can use the [baseline](memory/baseline/) or [trained](memory/trained) (larger library of skills and examples) agents, or you can initialise a new one by providing the name of the directory.
 
 
-### 4.2 (Optional) Example Tutorial: Teach your robot
+### 4.2 Tutorial teach your robot
 
 1. A good example to get an understanding of skill learning is to teach the agent to build a "zigzag tower". First, see what a zigzag tower is by running:
 
@@ -137,7 +155,7 @@ python main.py --memory_dir "baseline" --task "build-zigzag-tower" --debug True
 > You can run examples in the simulator by selecting "Run past examples" in the interactive CLI. Put in a task, and it will retrieve the most similar experiences the agent has stored, which can then be rolled out in the environment. (DISCLAIMER: some of these may not run properly, for a variety of reasons. If you generate new ones, this will work properly.) This is useful for inspecting the agents memory.
 
 
-### 4.3 (Optional) Test agent with pre-trained skill library in Ravens
+### 4.3 Test agent with pre-trained skill library
 Alternatively, you can test the pretrained agent capabilities on some [predefined tasks](task/__init__.py) by running:
 
 ```bash
