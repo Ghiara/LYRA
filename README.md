@@ -13,7 +13,7 @@ Official implementation of **LYRA**: A **L**ifelong learning code s**Y**nthesis 
 
 [Yuan Meng](https://github.com/Ghiara)<sup>1</sup>, [Zhenguo Sun](https://github.com/zhenshan-bing)<sup>2</sup>, [Max Fest]()<sup>1</sup>, [Xukun Li]()<sup>1</sup>,
 
-[Zhenshan Bing]()<sup>4,&dagger;</sup>, [Alois Knoll](https://www.ce.cit.tum.de/air/people/prof-dr-ing-habil-alois-knoll/)<sup>1</sup>.
+[Zhenshan Bing]()<sup>3,&dagger;</sup>, [Alois Knoll](https://www.ce.cit.tum.de/air/people/prof-dr-ing-habil-alois-knoll/)<sup>1</sup>.
 
 </div>
 
