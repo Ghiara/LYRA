@@ -21,13 +21,17 @@ Official implementation of **LYRA**: A **L**ifelong learning code s**Y**nthesis 
 
 ## 1. Abstract
 
-Large language models (LLMs) have been widely applied in robotic manipulation for their commonsense knowledge and semantic understanding. 
-Prior methods use LLMs for task decomposition with pre-trained policies or end-to-end pretraining, but they struggle with perturbations, data sparsity, and high computational costs. 
-More recently, LLM-based **code generation** has shown promise by directly translating human instructions into executable code, yet current methods remain noisy, limited by fixed primitives and context windows, and ineffective for long-horizon tasks. 
-While corrections have been explored, improper representation restricts generalization and causes catastrophic forgetting, highlighting the need to learn reusable **skills**. 
-We propose a **human-in-the-loop** framework that encodes corrections into skills, supported by external memory and **Retrieval-Augmented Generation** (RAG) with a hint mechanism for dynamic reuse. 
-Experiments across Ravens, Franka Kitchen, and MetaWorld, as well as real-world deployment on a Franka FR3, demonstrate that our framework achieves a 0.93 success rate (up to 27\% higher than baselines) and a 42\% efficiency improvement in correction rounds. 
-To the best of our knowledge, our framework is the first to robustly solve the extremely long-horizon task ``build a house``.
+Large language models (LLMs)-based code generation for robotic manipulation has recently shown promise by directly translating human instructions into executable code, but existing approaches are limited by language ambiguity, noisy outputs, and limited context windows, which makes long-horizon tasks hard to solve.
+While closed-loop feedback has been explored, approaches that rely solely on LLM guidance frequently fail in extremely long-horizon scenarios due to LLMs' limited reasoning capability in the robotic domain, where such issues are often simple for humans to identify.
+Moreover, corrected knowledge is often stored in improper formats, restricting generalization and causing catastrophic forgetting, which highlights the need for learning reusable and extendable skills. 
+To address these issues, we propose a human-in-the-loop lifelong skill learning and code generation framework that encodes feedback into reusable skills and extends their functionality over time.
+An external memory with Retrieval-Augmented Generation and a hint mechanism supports dynamic reuse, enabling robust performance on long-horizon tasks.
+Experiments on Ravens, Franka Kitchen, and MetaWorld, as well as real-world settings, show that our framework achieves a 0.93 success rate (up to 27% higher than baselines) and a 42% efficiency improvement in feedback rounds. 
+It can robustly solve extremely long-horizon tasks such as ``build a house``, which requires planning over 20 primitives.
+
+<p align="center">
+  <img src="docs/imgs/LYRA-overview.png" width="800"/>
+</p>
 
 ## 2. Installation
 
@@ -37,16 +41,17 @@ To the best of our knowledge, our framework is the first to robustly solve the e
 git clone https://github.com/Ghiara/LYRA.git
 ```
 
-Create the conda environment with Python 3.12 (we recommend using mamba, creating the env with conda failed for us).
+- 2.2 Create the conda environment with Python 3.12 (we recommend using mamba, creating the env with conda failed for us).
 
 ```bash
 cd LYRA
+
 mamba env create -n lyra -f environment.yml
 
 conda activate lyra
 ```
 
-- 2.2 Add an OpenAI API key as a python environment variable to run experiments.
+- 2.3 Add an OpenAI API key as a python environment variable to run experiments.
 For example, you can add the following line to .bashrc, .zshrc, or .bash_profile.
 
 ```bash
@@ -93,39 +98,7 @@ python main.py --memory_dir "baseline"
 You can use the [baseline](memory/baseline/) or [trained](memory/trained) (larger library of skills and examples) agents, or you can initialise a new one by providing the name of the directory.
 
 
-
-### 4.2 (optional) Test agent with pre-trained skill library
-Alternatively, you can test the pretrained agent capabilities on some [predefined tasks](task/__init__.py) by running:
-
-```bash
-python main.py --memory_dir "trained" --task "construct-smiley-face"
-```
-
-All CLIs for agent with trained skill database are listed here:
-```bash
-python main.py --memory_dir "trained" --task "place-green-next-to-yellow"
-python main.py --memory_dir "trained" --task "build-house"
-python main.py --memory_dir "trained" --task "place-blocks-diagonally"
-python main.py --memory_dir "trained" --task "stack-blocks"
-python main.py --memory_dir "trained" --task "stack-blocks-big-to-small"
-python main.py --memory_dir "trained" --task "stack-blocks-induce-failure"
-python main.py --memory_dir "trained" --task "build-cube"
-python main.py --memory_dir "trained" --task "build-block-pyramid"
-python main.py --memory_dir "trained" --task "build-jenga-layer"
-python main.py --memory_dir "trained" --task "build-jenga-tower"
-python main.py --memory_dir "trained" --task "build-jenga-tower-long-description"
-python main.py --memory_dir "trained" --task "construct-smiley-face"
-python main.py --memory_dir "trained" --task "construct-smiley-face-long-description"
-python main.py --memory_dir "trained" --task "build-zigzag-tower"
-python main.py --memory_dir "trained" --task "build-zigzag-tower-long-description"
-python main.py --memory_dir "trained" --task "place-blue-blocks-around-red-block"
-```
-
->[!NOTE]
-> A task provides the initial environment setup and the description of what you want the agent to do. Determining whether or not the agent was successful is left up to the user. [task/**init**.py](task/__init__.py) lists the valid task identifiers, and you can find the tasks (and add new ones) in [task/tasks.py](task/tasks.py). You can also generate one from a prompt (e.g. "6 big red blocks and 2 small green ones") in the interactive CLI.
-
-
-### 4.3 Example Tutorial: Teach your robot
+### 4.2 (Optional) Example Tutorial: Teach your robot
 
 1. A good example to get an understanding of skill learning is to teach the agent to build a "zigzag tower". First, see what a zigzag tower is by running:
 
@@ -164,11 +137,42 @@ python main.py --memory_dir "baseline" --task "build-zigzag-tower" --debug True
 > You can run examples in the simulator by selecting "Run past examples" in the interactive CLI. Put in a task, and it will retrieve the most similar experiences the agent has stored, which can then be rolled out in the environment. (DISCLAIMER: some of these may not run properly, for a variety of reasons. If you generate new ones, this will work properly.) This is useful for inspecting the agents memory.
 
 
+### 4.3 (Optional) Test agent with pre-trained skill library in Ravens
+Alternatively, you can test the pretrained agent capabilities on some [predefined tasks](task/__init__.py) by running:
+
+```bash
+python main.py --memory_dir "trained" --task "construct-smiley-face"
+```
+
+All CLIs for agent with trained skill database are listed here:
+```bash
+python main.py --memory_dir "trained" --task "place-green-next-to-yellow"
+python main.py --memory_dir "trained" --task "build-house"
+python main.py --memory_dir "trained" --task "place-blocks-diagonally"
+python main.py --memory_dir "trained" --task "stack-blocks"
+python main.py --memory_dir "trained" --task "stack-blocks-big-to-small"
+python main.py --memory_dir "trained" --task "stack-blocks-induce-failure"
+python main.py --memory_dir "trained" --task "build-cube"
+python main.py --memory_dir "trained" --task "build-block-pyramid"
+python main.py --memory_dir "trained" --task "build-jenga-layer"
+python main.py --memory_dir "trained" --task "build-jenga-tower"
+python main.py --memory_dir "trained" --task "build-jenga-tower-long-description"
+python main.py --memory_dir "trained" --task "construct-smiley-face"
+python main.py --memory_dir "trained" --task "construct-smiley-face-long-description"
+python main.py --memory_dir "trained" --task "build-zigzag-tower"
+python main.py --memory_dir "trained" --task "build-zigzag-tower-long-description"
+python main.py --memory_dir "trained" --task "place-blue-blocks-around-red-block"
+```
+
+>[!NOTE]
+> A task provides the initial environment setup and the description of what you want the agent to do. Determining whether or not the agent was successful is left up to the user. [task/**init**.py](task/__init__.py) lists the valid task identifiers, and you can find the tasks (and add new ones) in [task/tasks.py](task/tasks.py). You can also generate one from a prompt (e.g. "6 big red blocks and 2 small green ones") in the interactive CLI.
+
+
 
 
 ## Repository Structure
 
-- [agents] contains the LLM agent modules for [generating robot policy code](agents/action), for [setting up the environment](agents/environment), and for [skill parsing](agents/skill) (i.e. mapping natural language skill descriptions to python function headers). [agents/memory](agents/memory) contains all the memory related modules, which rely on [ChromaDB](https://www.trychroma.com), used for managing the skill and example libraries (as well as storing environment configs). [agents/model](agents/model) contains the relevant data classes (Skill, TaskExample, EnvironmentConfiguration, and InteractionTrace), for pickling and basic convenience functions.
+- [agents](agents) contains the LLM agent modules for [generating robot policy code](agents/action), for [setting up the environment](agents/environment), and for [skill parsing](agents/skill) (i.e. mapping natural language skill descriptions to python function headers). [agents/memory](agents/memory) contains all the memory related modules, which rely on [ChromaDB](https://www.trychroma.com), used for managing the skill and example libraries (as well as storing environment configs). [agents/model](agents/model) contains the relevant data classes (Skill, TaskExample, EnvironmentConfiguration, and InteractionTrace), for pickling and basic convenience functions.
 
 - [environments](environments) contains all the environment-related code. This could be simplified substantially, or ideally replaced with something better. This repository builds on the [Cliport](https://github.com/cliport/cliport) repo, primarily for the accompanying Ravens benchmark, though there is a lot of unused code leftover from it (mostly in this [environments](environments) folder and [utils/general_utils]([utils/general_utils])).
 
