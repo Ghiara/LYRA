@@ -8,7 +8,7 @@
 
 Official implementation of **LYRA**: A **L**ifelong learning code s**Y**nthesis framework with human-in-the-loop for **R**obotic long-horizon skill **A**cquisition
 
-#### [[Project Website]](https://ghiara.github.io/LYRA/) [[Paper]](docs/LYRA-v2.pdf)
+#### [[Project Website]](https://ghiara.github.io/LYRA/) [[Paper]](https://arxiv.org/abs/2509.18597)
 
 
 [Yuan Meng](https://github.com/Ghiara)<sup>1</sup>, [Zhenguo Sun](https://github.com/zhenshan-bing)<sup>2</sup>, [Max Fest]()<sup>1</sup>, [Xukun Li]()<sup>1</sup>,
@@ -213,3 +213,21 @@ python main.py --memory_dir "trained" --task "place-blue-blocks-around-red-block
 - [Cliport](https://github.com/cliport/cliport) – for the basic Ravens benchmark setup
 - [Code-as-Policies](https://github.com/google-research/google-research/tree/master/code_as_policies) - code-generation for robotics
 - [VOYAGER](https://github.com/MineDojo/Voyager), [Expel](https://github.com/LeapLabTHU/ExpeL), [DROC](https://github.com/Stanford-ILIAD/droc) - provided the inspiration for our code base, and the concept of LLM-Agent -_learning_ by reading and writing to memory based on experience
+
+
+## Citation
+
+If you find this work useful, please cite:
+```bibtex
+
+  @article{meng2025growing,
+    title={Growing with Your Embodied Agent: A Human-in-the-Loop Lifelong Code Generation Framework for Long-Horizon Manipulation Skills},
+    author={Meng, Yuan and Sun, Zhenguo and Fest, Max and Li, Xukun and Bing, Zhenshan and Knoll, Alois},
+    journal={arXiv preprint arXiv:2509.18597},
+    year={2025}
+  }
+
+```
+
+
+[def]: https://arxiv.org/abs/2509.18597
