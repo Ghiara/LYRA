@@ -21,6 +21,8 @@ body {
 .teaser .hero-body {
   padding-top: 0;
   padding-bottom: 3rem;
+  max-width: 100%;      /* half of text width */
+  margin: 0 auto;      /* center it */
 }
 
 .teaser {
@@ -133,6 +135,9 @@ body {
 .eql-cntrb { 
   font-size: smaller;
 }
-
+.half-width-container {
+    max-width: 50%;      /* half of text width */
+    margin: 0 auto;      /* center it */
+  }
 
 
