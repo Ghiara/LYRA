@@ -115,16 +115,14 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="./LYRA-v2.pdf" target="_blank"
+                        <a href="https://arxiv.org/abs/2509.18597" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
+                          <i class="ai ai-arxiv"></i>
                         </span>
                         <span>Paper</span>
                       </a>
                     </span>
-
-                    <!-- Supplementary PDF link -->
                     
 
                   <!-- Github link -->
@@ -140,17 +138,6 @@
 
                   <!-- Github link -->
                   
-
-                <!-- ArXiv abstract Link -->
-                <!-- <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span> -->
             </div>
           </div>
         </div>
@@ -361,21 +348,9 @@
 
 
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      
-      <h2 class="subtitle has-text-justified">
-        <b>Simulation demonstrations of various long-horizon tasks from both original LoHoRavens benchmark and generated pool</b>. 
-        We test our method in the original LoHoRavens benchmark and the generated pool, where the agent needs to perform up to 20 long-horizon tasks
-      </h2>
-    </div>
-  </div>
-</section> -->
 
 
-
-<!-- Paper abstract -->
+<-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -398,282 +373,203 @@
 </section>
 <!-- End paper abstract -->
 
+
 <section class="section">
-  <div class="container is-max-widescreen" bis_skin_checked="1">
-
-    <div class="rows" bis_skin_checked="1">
-
-
-    <!-- Animation. -->
-    <div class="rows is-centered " bis_skin_checked="1">
-      <div class="row is-full-width" bis_skin_checked="1">
-        <h2 class="title is-3"><span class="dcapravens">LYRA</span></h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Framework Overview</h3>
-        <div class="content has-text-justified" bis_skin_checked="1">
-          <p>
-            
-          </p>
-        </div>
-        <img src="./imgs/LYRA-overview.png" class="interpolation-image" alt="Interpolate start reference image.">
-        <br>
-        <br>
-            <b>Fig. 1:</b> Overview of LYRA. 
-            
-        <br>
-        <br>
-        <br>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <!-- <h3 class="title is-4">Prompts</h3>
-        <div class="content has-text-justified" bis_skin_checked="1">
-          <p>
-            We use prompt consisting of several functional parts to instruct the LLM to output reasonable content. These parts are imports,
-            method explanations, orientations, general requirements, task examples and question. Each part is written in Python style and should 
-            guide the LLM to get familiar with the environment where the robot performs task completion, including the way to get information from 
-            the environment, as well as the way to control the objects in the environment.
-
-          </p>
-        </div>
-        <div id="results-carousel" class="carousel results-carousel"> -->
-      
-          <!-- <div class="item">
-           <img src="static/images/import.png" alt="general LRL overview" class="center"/>
-           <h2 class="subtitle has-text-justified">
-             <b>Imports:</b>. 
-             Example of importation that tells the LLM the methods it can directly use, which can also
-             include language model programs (LMPs).
-           </h2>
-         </div>
-   
-         <div class="item">
-           <img src="static/images/explanation.png" alt="Training" class="center"/>
-           <h2 class="subtitle has-text-justified">
-            <b>Method explanations:</b>
-            Example of API introduction, which emphasizes the data format of arguments and return
-            values.
-           </h2>
-         </div>
-         <div class="item">
-           <img src="static/images/orientation.png" alt="Deployment" class="center"/>
-           <h2 class="subtitle has-text-justified">
-            <b>Orientations:</b>
-            Example of orientation explanation, which describes the relationship between common
-            orientation expressions and coordinate axes.
-          </h2>
-        </div>
-        <div class="item">
-         <img src="static/images/requirement.png" alt="Success rate" class="center"/>
-         <h2 class="subtitle has-text-justified">
-           <b>General requirements:</b> 
-           Example of overall requirements.
-         </h2>
-       </div>
-       <div class="item">
-         <img src="static/images/example.png" alt="t-SNE projection" class="center"/>
-         <h2 class="subtitle has-text-justified">
-           <b>Task examples:</b> 
-           A small set of task examples of increasing difficulty for LMP parse_obj_name(), which should return objects that match the 
-           language discription.
-         </h2>
-       </div>
-       <div class="item">
-        <img src="static/images/question.png" alt="t-SNE projection" class="center"/>
-        <h2 class="subtitle has-text-justified">
-          <b>Question:</b> 
-          Example of the current task for LMP parse_obj_name().
-        </h2>
-      </div>
-     </div> -->
-
-        <!--/ Re-rendering. -->
-      <!-- </div> -->
-    </div>
-
-  <!-- </div> -->
-</div></section>
-
-<!-- <section class="section">
-  <div class="container is-max-widescreen" bis_skin_checked="1">
-
-    <div class="rows" bis_skin_checked="1">
-
-      <div class="rows is-centered " bis_skin_checked="1">
-        <div class="row is-full-width" bis_skin_checked="1">
-          <h3 class="title is-4">Scalability</h3>
-          <div class="content has-text-justified" bis_skin_checked="1">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">LYRA</h2>
+        <h3 class="title is-4">Framework</h3>
+          <div class="content has-text-justified">
             <p>
-              To assess the scalability and generalization of our framework across different embodiments and task setups, 
-              we conduct additional experiments using the CALVIN and Franka Kitchen benchmarks. The average success rates 
-              for individual subtasks are presented in Table \ref{tab:scalability}. The results show that our default 
-              dual-tunnel DAHLIA setup consistently outperforms its planner-only variation (DAHLIA GPT-4o-mini<sup>P</sup>), 
-              demonstrating the effectiveness of its closed-loop feedback mechanism in improving execution reliability. 
-              Our framework achieves 100% success in most tasks, including lift block, open drawer, open slide door, kettle, 
-              and slider cabinet, while also surpassing the planner-only model in complex tasks requiring precise coordination, 
-              such as rotate block (+4%) and turn on switch (+4%) in CALVIN, as well as top burner (+6%) and bottom burner (+8%) 
-              in Franka Kitchen. Notably, the planner-only model may struggle in tasks requiring highly accurate task planning and 
-              fine-grained manipulation motions. For example, in the "top burner" and "bottom burner" tasks in Franka Kitchen, 
-              the robot must accurately reach the correct rotary knob and rotate it counterclockwise by 45 degrees to activate 
-              the corresponding burner. Errors in task planning or dexterous execution—such as selecting the wrong switch or rotating 
-              in the wrong direction—can lead to complete task failure. In such cases, closed-loop feedback in the dual-tunnel plays a 
-              critical role by detecting and correcting execution errors, enabling the planner to refine its actions and complete 
-              the global task plan. The performance gap between the two DAHLIA variations is relatively small, as both employ temporal 
-              abstraction and CoT-based task planning, ensuring efficient long-horizon primitive execution. However, the closed-loop 
-              feedback mechanism can enhance robustness, allowing for error correction and ensuring greater stability in complex environments. 
-              These results further validate DAHLIA's robust execution and adaptive reasoning capabilities, demonstrating its ability to 
-              generalize across diverse tasks and embodiments.
+              Our framework is built around a three-phase pipeline designed to help a robotic agent continually acquire, 
+              refine, and reuse skills through human-in-the-loop interaction. Together, these phases enable long-horizon 
+              manipulation that remains reliable, interpretable, and aligned with the user's preferences.
+            </p>
+            <p>
+              <b>Phase I — Preference-Aligned Skill Acquisition.</b>
+              The first phase focuses on teaching the robot new skills through iterative
+              interaction with the user. Instead of requiring the LLM to interpret complex
+              tasks at once, the system gradually clarifies what skill to learn, how the
+              environment should be initialized, and what behavior is expected. Users give
+              natural-language descriptions, review generated function definitions, and
+              observe real-time rollouts. Through repeated accept/reject and free-form
+              feedback cycles, the agent converges toward a functional, preference-aligned
+              skill that forms the basis for future learning.
             </p>
 
-            <table>
-              <caption>Average success rates (%) for individual subtasks in CALVIN and Franka Kitchen</caption>
-              <tr>
-                  <th>CALVIN Tasks</th>
-                  <th>&dagger;DAHLIA (GPT-4o-mini<sup>P</sup>)</th>
-                  <th>DAHLIA (Ours)</th>
-              </tr>
-              <tr><td>lift block</td><td>100</td><td>100</td></tr>
-              <tr class="gray-row"><td>rotate block</td><td>94</td><td>98</td></tr>
-              <tr><td>turn on switch</td><td>96</td><td>100</td></tr>
-              <tr class="gray-row"><td>open slide door</td><td>100</td><td>100</td></tr>
-              <tr><td>open drawer</td><td>100</td><td>100</td></tr>
-              <tr class="gray-row"><td><strong>overall</strong></td><td>98.00</td><td>99.60</td></tr>
-              
-              <tr>
-                  <th>Franka Kitchen Tasks</th>
-                  <th>&dagger;DAHLIA (GPT-4o-mini<sup>P</sup>)</th>
-                  <th>DAHLIA (Ours)</th>
-              </tr>
-              <tr><td>microwave</td><td>98</td><td>100</td></tr>
-              <tr class="gray-row"><td>kettle</td><td>100</td><td>100</td></tr>
-              <tr><td>light</td><td>98</td><td>100</td></tr>
-              <tr class="gray-row"><td>top burner</td><td>90</td><td>96</td></tr>
-              <tr><td>bottom burner</td><td>90</td><td>98</td></tr>
-              <tr class="gray-row"><td>slider cabinet</td><td>100</td><td>100</td></tr>
-              <tr><td>hinge cabinet</td><td>96</td><td>98</td></tr>
-              <tr class="gray-row"><td><strong>overall</strong></td><td>96.00</td><td>98.86</td></tr>
-          </table>
-          <div class="footnotes">
-              <p><sup>P</sup> indicates the Planner model. &dagger; indicates the framework barely uses a Planner-only tunnel for open-loop control without the Reporter.</p>
+            <p>
+              <b>Phase II — Lifelong Capability Extension.</b>
+              After a basic skill is acquired, the user can expand its functionality under
+              a curriculum of increasingly challenging task variations. The agent must both
+              preserve prior behavior and incorporate new capabilities without overwriting
+              old ones. Skills can be extended with modular code or composed hierarchically.
+              All refined skills and successful examples are stored in an external memory
+              module, preventing forgetting and reducing hallucination during long-horizon
+              reasoning. Over time, the agent grows a robust and reusable skill library.
+            </p>
+
+            <p>
+              <b>Phase III — Task-Specific Retrieval and Planning.</b>
+              To solve long-horizon tasks, the agent retrieves the most relevant skills and
+              examples from memory based on semantic similarity. This keeps the prompt
+              compact while ensuring strong task relevance. Optional user-provided hints
+              guide retrieval toward the correct behaviors. With these retrieved elements,
+              the LLM composes multi-step task plans by calling previously learned skills,
+              enabling the robot to robustly perform complex manipulation tasks that require
+              more than 20 primitives.
+            </p>
           </div>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section> -->
-
-<!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-    
-    <div class="container">
-      
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-odd">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/lift.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-most">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/rotate.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-divide">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/switch.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-bisector">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/drawer.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fixture">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/slide.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fixture">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/kitchen1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
+          <img src="./imgs/framework.png" class="interpolation-image" alt="Detailed LYRA framework.">
+          <br>
+          <br>
+          <b>Fig. 1:</b> Detailed architecture of the LYRA framework.
+          <br>
+          <br>
+          <br>
       </div>
     </div>
-  </div>
-</section> -->
+</section>
 
 
-<!-- <section class="hero teaser">
+<!-- Experiments section -->
+<section class="section hero is-light">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="subtitle has-text-justified">
-        <b>Simulation demonstrations in CALVIN and Franka Kitchen Benchmark</b>. 
-        We also test the method in other benchmarks like CALVIN and Franka Kitchen with different robot setup, 
-        where the agent needs to perform various tasks in a table-top environment or a kitchen environment. 
-        For CALVIN, the agent needs to perform up to five tasks in a row according to language instructions.
-        For Franka Kitchen, the agent needs to perform up to 4 sub-tasks in a row according to language instructions.
-      </h2>
-    </div>
-  </div>
-</section> -->
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Experiments</h2>
 
-<!-- Image carousel -->
+        <!-- Success rate figure -->
+        <h3 class="title is-4">Baselines comparison</h3>
+        <div class="content has-text-justified">
+          <p>
+          Our success rate evaluation demonstrates that human-in-the-loop skill learning significantly 
+          improves long-horizon task performance. On the customized Ravens benchmark, open-loop CaP performs 
+          well only on tasks included in its prompt examples, but generalizes poorly to unseen 
+          structure-building tasks, achieving only a 0.45 success rate. Closed-loop baselines such as 
+          LoHoRavens and DAHLIA improve robustness through LLM feedback, yet they still encounter planning 
+          dead-ends in extremely long-horizon scenarios. Even our LYRA variant with LLM-only feedback—despite 
+          having access to all learned skills and examples—struggles to choose the correct behaviours, leading to a plateau at 0.77.
+          </p>
 
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container"> -->
-      <!-- Paper video. -->
-      <!-- <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video"> -->
-            <!-- Youtube embed code here -->
-            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-            <!-- <iframe src="https://assets-eu.researchsquare.com/files/rs-4353532/v1/d8c2289d1ccbba09ee8c9558.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
+          <p>
+          We further evaluate LYRA without external memory database, simulating approaches that extend demonstrations directly in the prompt. 
+          This variant represents the upper bound of prompt-based lifelong learning, yet its performance drops to 0.66 due 
+          to context-length limitations and interference from unrelated examples. In contrast, our full framework achieves a 0.93 
+          average success rate—up to <b>27% higher</b> than the variants—by combining structured skill inheritance with retrieval-augmented planning. 
+          These results highlight the importance of preference-aligned skill learning for scalable and reliable long-horizon manipulation.
+          </p>
         </div>
+        <img src="./imgs/success-rate.png" class="interpolation-image" alt="Success rate comparison.">
+        <br>
+        <br>
+        <b>Fig. 2:</b> Overall success rates of LYRA compared with code generation baseline methods across custermized Ravens tasks.
+        <br>
+        <br>
+        <br>
+
+        <!-- Skill tree figure -->
+        <h3 class="title is-4">Can you build a house?</h3>
+        <h3 class="title is-4">Learned skill tree</h3>
+        <div class="content has-text-justified">
+          <p>
+          To illustrate how lifelong user-guided learning enables complex long-horizon manipulation, 
+          we analyze the skill tree behind the “build a house” task. The final solution requires a hierarchy 
+          of 12 skills, developed bottom-up from core primitives and progressively expanded through user-designed tasks. 
+          These skills include both general-purpose behaviours inherited from earlier phases and new capabilities 
+          tailored to house construction, such as precise block alignment, corner-to-corner stacking, and structured assembly.
+          </p>
+
+          <p>
+          During execution, the high-level instruction is decomposed top-down into subtasks—organizing the scene, building 
+          the base, and constructing the roof—each supported by relevant learned skills retrieved from external memory. 
+          Unlike LLM-only closed-loop methods that generate flat code without understanding intermediate behaviours, 
+          our framework systematically accumulates reusable, modular skills that prevent catastrophic forgetting. 
+          This coordinated combination of bottom-up skill acquisition and top-down task planning produces a rich skill tree 
+          that scales to complex tasks and, to our knowledge, enables the first fully successful “build a house” solution.
+          </p>
+        </div>
+
+        <img src="./imgs/skill-tree.png" class="interpolation-image" alt="Skill tree / skill hierarchy.">
+        <br>
+        <br>
+        <b>Fig. 3:</b> Skill tree illustrating how LYRA incrementally acquires, refines, and reuses manipulation skills over time to enable a extreme long-horizon task "build a house".
+        <br>
+        <br>
+        <br>
       </div>
     </div>
   </div>
-</section> -->
-<!-- End youtube video -->
+</section>
 
 
-<!-- Video carousel -->
+<!-- Scalability section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Scalability Across Benchmarks</h2>
+        <div class="content has-text-justified">
+          <p>
+            <!-- TODO: add a short overview of scalability experiments on Meta-World and Franka Kitchen here. -->
+          </p>
+        </div>
 
-<!-- End video carousel -->
+        <!-- Meta-World scalability -->
+        <h3 class="title is-4">Meta-World</h3>
+        <div class="content has-text-justified">
+          <p>
+            <!-- TODO: describe the Meta-World long-horizon tasks and LYRA's performance here. -->
+          </p>
+        </div>
+        <img src="./imgs/mw.png" class="interpolation-image" alt="Meta-World scalability results.">
+        <br>
+        <br>
+        <b>Fig. 4:</b> Scalability of LYRA on Meta-World tasks, demonstrating robust performance across diverse task compositions.
+        <br>
+        <br>
+        <br>
+
+        <!-- Franka Kitchen scalability -->
+        <h3 class="title is-4">Franka Kitchen</h3>
+        <div class="content has-text-justified">
+          <p>
+            <!-- TODO: describe the Franka Kitchen tasks and cross-embodiment generalization here. -->
+          </p>
+        </div>
+        <img src="./imgs/fk.png" class="interpolation-image" alt="Franka Kitchen scalability results.">
+        <br>
+        <br>
+        <b>Fig. 5:</b> Scalability experiments on the Franka Kitchen benchmark, showing LYRA's ability to generalize to complex long-horizon kitchen tasks.
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Citation</h2>
+        <!-- <h2 class="title is-3">Citation</h2> -->
+        <p>If you find this work useful, please cite:</p>
+        <br>
+        <pre style="text-align:left; background:#f5f5f5; padding:20px; border-radius:5px;">
+          @article{meng2025growing,
+            title={Growing with Your Embodied Agent: A Human-in-the-Loop Lifelong Code Generation Framework for Long-Horizon Manipulation Skills},
+            author={Meng, Yuan and Sun, Zhenguo and Fest, Max and Li, Xukun and Bing, Zhenshan and Knoll, Alois},
+            journal={arXiv preprint arXiv:2509.18597},
+            year={2025}
+          }
+        </pre>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 
-
-
-
-
-<!-- Paper poster -->
-
-<!--End paper poster -->
-
-
-<!--BibTex citation -->
-  
-<!--End BibTex citation -->
 
 
   <footer class="footer">
