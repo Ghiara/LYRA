@@ -1,4 +1,4 @@
-# Growing with Your Embodied Agent: A Human-in-the-Loop Lifelong Code Generation Framework for Long-Horizon Manipulation Skills
+# Robotic Ultra Long-Horizon Manipulation Skills via Human-guided Lifelong Code Generation
 
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/release/python-3127/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
@@ -11,7 +11,7 @@ Official implementation of **LYRA**: A **L**ifelong learning code s**Y**nthesis 
 #### [[Project Website]](https://ghiara.github.io/LYRA/) [[Paper]](https://arxiv.org/abs/2509.18597)
 
 
-[Yuan Meng](https://github.com/Ghiara)<sup>1</sup>, [Zhenguo Sun](https://github.com/zhenshan-bing)<sup>2</sup>, [Max Fest]()<sup>1</sup>, [Xukun Li]()<sup>1</sup>,
+[Yuan Meng](https://github.com/Ghiara)<sup>1</sup>, [Zhenguo Sun](https://github.com/zhenshan-bing)<sup>2</sup>, [Max Fest]()<sup>1</sup>, [Xiangtong Yao]()<sup>1</sup>, [Xukun Li]()<sup>1</sup>,
 
 [Zhenshan Bing]()<sup>3,&dagger;</sup>, [Alois Knoll](https://www.ce.cit.tum.de/air/people/prof-dr-ing-habil-alois-knoll/)<sup>1</sup>.
 
