@@ -1,4 +1,4 @@
-# Robotic Ultra Long-Horizon Manipulation Skills via Human-guided Lifelong Code Generation
+# Robotic Ultra-Long-Horizon Manipulation Skills via Human-guided Lifelong Code Generation
 
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/release/python-3127/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
