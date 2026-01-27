@@ -8,24 +8,6 @@
 
 Official implementation of **LYRA**: A **L**ifelong learning code s**Y**nthesis framework with human-in-the-loop for **R**obotic long-horizon skill **A**cquisition
 
-#### [[Project Website]](https://ghiara.github.io/LYRA/) [[Paper]](https://arxiv.org/abs/2509.18597)
-
-
-[Yuan Meng](https://github.com/Ghiara)<sup>1</sup>, [Zhenguo Sun](https://github.com/zhenshan-bing)<sup>2</sup>, [Max Fest]()<sup>1</sup>, [Xiangtong Yao]()<sup>1</sup>, [Xukun Li]()<sup>1</sup>,
-
-[Zhenshan Bing]()<sup>3,&dagger;</sup>, [Alois Knoll](https://www.ce.cit.tum.de/air/people/prof-dr-ing-habil-alois-knoll/)<sup>1</sup>.
-
-</div>
-
-<p align="center">
-<small><sup>1</sup>School of Computation, Information and Technology, Technical University of Munich, Germany</small>
-<br><small><sup>2</sup>Beijing Academy of Artificial Intelligence (BAAI), China</small>
-<br><small><sup>3</sup>State Key Laboratory for Novel Software Technology, Nanjing University, China</small>
-<small><br><sup>&dagger;</sup>To whom correspondence should be addressed; E-mail: bing@nju.edu.cn</small>
-</p>
-
-
-
 - [LYRA](#LYRA-todo)
   - [1. Abstract](#1-abstract)
   - [2. Installation](#2-installation)
@@ -53,13 +35,6 @@ It can robustly solve extremely long-horizon tasks such as ``build a house``, wh
 
 ## 2. Installation
 
-- 2.1 Clone the repository:
-
-```bash
-git clone https://github.com/Ghiara/LYRA.git
-```
-
-- 2.2 Create the conda environment with Python 3.12 (we recommend using mamba, creating the env with conda failed for us).
 
 ```bash
 cd LYRA
@@ -69,7 +44,7 @@ mamba env create -n lyra -f environment.yml
 conda activate lyra
 ```
 
-- 2.3 Add an OpenAI API key as a python environment variable to run experiments.
+- Add an OpenAI API key as a python environment variable to run experiments.
 For example, you can add the following line to .bashrc, .zshrc, or .bash_profile.
 
 ```bash
