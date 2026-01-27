@@ -24,8 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Growing with Your Embodied Agent: A Human-in-the-Loop Lifelong Code Generation Framework for Long-Horizon Manipulation Skills</title>
-  <link rel="icon" type="image/x-icon" href="static/images/tum_icon.ico">
+  <title>Robotic Ultra Long-Horizon Manipulation Skills via Human-guided Lifelong Code Generation</title>
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -82,62 +81,20 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Growing with Your Embodied Agent: A Human-in-the-Loop Lifelong Code Generation Framework for Long-Horizon Manipulation Skills</h1>
+            <h1 class="title is-1 publication-title">Robotic Ultra Long-Horizon Manipulation Skills via Human-guided Lifelong Code Generation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a target="_blank">Yuan Meng</a><sup>1</sup>,</span>
-              <span class="author-block">
-                <a target="_blank">Zhenguo Sun</a><sup>2</sup>,</span>
-              <span class="author-block">
-                <a target="_blank">Max Fest</a><sup>1</sup>,</span>
-              <span class="author-block">
-                <a target="_blank">Xukun Li</a><sup>1</sup>,</span>
-              <br>
-              <span class="author-block">
-                <a target="_blank">Zhenshan Bing</a><sup>3,&dagger;</sup>,</span>
-              <span class="author-block">
-                <a target="_blank">Anois Knoll</a><sup>1</sup>,</span>
-                    
+                <a target="_blank">Anonymous Authors</a><sup>1</sup></span>                    
                   </div>
 
                   <div class="is-size-5 publication-authors">
                     <span class="author-block">
-                      <small><sup>1</sup>School of Computation, Information and Technology, Technical University of Munich, Germany</small>
-                      <br><small><sup>2</sup>Beijing Academy of Artificial Intelligence (BAAI), Bejing, China</small>
-                      <br><small><sup>3</sup>State Key Laboratory for Novel Software Technology, Nanjing University, China</small>
-                      <br><small><sup>&dagger;</sup>Corresponding author: bing@nju.edu.cn</small>
+                      <small><sup>1</sup>Anonymous Institution, Anonymous City, Anonymous Region, Anonymous Country. Correspondence to: Anonymous Author anon.email@domain.com. </small>
                     </span>
                     
                   </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/abs/2509.18597" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="ai ai-arxiv"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-                    
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/Ghiara/LYRA" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                  <!-- Github link -->
-                  
             </div>
           </div>
         </div>
@@ -153,10 +110,10 @@
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
         <!-- <source src="static/videos/banner_video.mp4" type="video/mp4"> -->
-        <source src="./static/videos/LYRA-supplementary-video-compressed.mp4" type="video/mp4">
+        <source src="./videos/LYRA_demo_icml.mp4" type="video/mp4">
       </video>
       <h2 class="subtitle has-text-justified">
-        <b>Video demonstrations of LYRA in solving both simulation and real-world long-horizon tasks</b>.
+        <b>Video demonstrations of LYRA in solving both simulation and real-world ultra-long-horizon tasks</b>.
       </h2>
     </div>
   </div>
@@ -176,12 +133,11 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Large language models (LLMs)-based code generation for robotic manipulation has recently shown promise by directly translating human instructions into executable code, but existing approaches are limited by language ambiguity, noisy outputs, and limited context windows, which makes long-horizon tasks hard to solve.
-            While closed-loop feedback has been explored, approaches that rely solely on LLM guidance frequently fail in extremely long-horizon scenarios due to LLMs' limited reasoning capability in the robotic domain, where such issues are often simple for humans to identify.
-            Moreover, corrected knowledge is often stored in improper formats, restricting generalization and causing catastrophic forgetting, which highlights the need for learning reusable and extendable skills.
-            To address these issues, we propose a human-in-the-loop lifelong skill learning and code generation framework that encodes feedback into reusable skills and extends their functionality over time.
-            An external memory with Retrieval-Augmented Generation and a hint mechanism supports dynamic reuse, enabling robust performance on long-horizon tasks.
-            Experiments on Ravens, Franka Kitchen, and MetaWorld, as well as real-world settings, show that our framework achieves a 0.93 success rate (up to 27% higher than baselines) and a 42% efficiency improvement in feedback rounds. 
+            Recent progress in Large language models (LLMs)-based code generation for robotic manipulation has demonstrated the potential to translate natural-language instructions directly into executable programs. However, existing methods are constrained by language ambiguity, noisy generations, and limited context windows, making long-horizon manipulation tasks difficult to solve reliably.
+            Although closed-loop feedback has been explored, approaches that rely purely on LLM-driven feedback often fail in extremely long-horizon settings due to the limited reasoning capability of LLMs in robotic domains, where many errors are straightforward for humans to detect.
+            Furthermore, feedback knowledge is commonly stored in unsuitable representations, which limits generalization and leads to catastrophic forgetting, underscoring the need for reusable and extensible skill representations.
+            To address these challenges, we propose a human-in-the-loop lifelong skill learning and code generation framework that distills human feedback into modular, reusable skills and incrementally extends their functionality over time. An external memory combined with retrieval-augmented generation and a hint mechanism enables dynamic skill reuse and supports robust long-horizon execution.
+            Experiments on Ravens, Franka Kitchen, LIBERO-long and MetaWorld, as well as real-world settings, show that our framework achieves a 0.93 success rate (up to 27% higher than baselines) and a 42% NoC efficiency improvement in feedback rounds. 
             It can robustly solve extremely long-horizon tasks such as ``build a house'', which requires planning over 20 primitives.
           </p>
         </div>
@@ -432,31 +388,6 @@
     </div>
   </div>
 </section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <h2 class="title is-3">Citation</h2>
-        <!-- <h2 class="title is-3">Citation</h2> -->
-        <p>If you find this work useful, please cite:</p>
-        <br>
-        <pre style="text-align:left; background:#f5f5f5; padding:20px; border-radius:5px;">
-          @article{meng2025growing,
-            title={Growing with Your Embodied Agent: A Human-in-the-Loop Lifelong Code Generation Framework for Long-Horizon Manipulation Skills},
-            author={Meng, Yuan and Sun, Zhenguo and Fest, Max and Li, Xukun and Bing, Zhenshan and Knoll, Alois},
-            journal={arXiv preprint arXiv:2509.18597},
-            year={2025}
-          }
-        </pre>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
 
 
   <footer class="footer">
