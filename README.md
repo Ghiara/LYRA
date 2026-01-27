@@ -21,12 +21,11 @@ Official implementation of **LYRA**: A **L**ifelong learning code s**Y**nthesis 
 
 ## 1. Abstract
 
-Large language models (LLMs)-based code generation for robotic manipulation has recently shown promise by directly translating human instructions into executable code, but existing approaches are limited by language ambiguity, noisy outputs, and limited context windows, which makes long-horizon tasks hard to solve.
-While closed-loop feedback has been explored, approaches that rely solely on LLM guidance frequently fail in extremely long-horizon scenarios due to LLMs' limited reasoning capability in the robotic domain, where such issues are often simple for humans to identify.
-Moreover, corrected knowledge is often stored in improper formats, restricting generalization and causing catastrophic forgetting, which highlights the need for learning reusable and extendable skills. 
-To address these issues, we propose a human-in-the-loop lifelong skill learning and code generation framework that encodes feedback into reusable skills and extends their functionality over time.
-An external memory with Retrieval-Augmented Generation and a hint mechanism supports dynamic reuse, enabling robust performance on long-horizon tasks.
-Experiments on Ravens, Franka Kitchen, and MetaWorld, as well as real-world settings, show that our framework achieves a 0.93 success rate (up to 27% higher than baselines) and a 42% efficiency improvement in feedback rounds. 
+Recent progress in Large language models (LLMs)-based code generation for robotic manipulation has demonstrated the potential to translate natural-language instructions directly into executable programs. However, existing methods are constrained by language ambiguity, noisy generations, and limited context windows, making long-horizon manipulation tasks difficult to solve reliably.
+Although closed-loop feedback has been explored, approaches that rely purely on LLM-driven feedback often fail in extremely long-horizon settings due to the limited reasoning capability of LLMs in robotic domains, where many errors are straightforward for humans to detect.
+Furthermore, feedback knowledge is commonly stored in unsuitable representations, which limits generalization and leads to catastrophic forgetting, underscoring the need for reusable and extensible skill representations.
+To address these challenges, we propose a human-in-the-loop lifelong skill learning and code generation framework that distills human feedback into modular, reusable skills and incrementally extends their functionality over time. An external memory combined with retrieval-augmented generation and a hint mechanism enables dynamic skill reuse and supports robust long-horizon execution.
+Experiments on Ravens, Franka Kitchen, LIBERO-long and MetaWorld, as well as real-world settings, show that our framework achieves a 0.93 success rate (up to 27\% higher than baselines) and a 42\% efficiency improvement in feedback rounds. 
 It can robustly solve extremely long-horizon tasks such as ``build a house``, which requires planning over 20 primitives.
 
 <p align="center">
