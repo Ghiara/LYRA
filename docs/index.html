@@ -5,7 +5,7 @@
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:title" content="Robotic Ultra-Long-Horizon Manipulation Skills via Human-guided Lifelong Code Generation"/>
   <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
@@ -14,7 +14,7 @@
   <meta property="og:image:height" content="630"/>
 
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:title" content="Robotic Ultra-Long-Horizon Manipulation Skills via Human-guided Lifelong Code Generation">
   <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Growing with Your Embodied Agent: A Human-in-the-Loop Lifelong Code Generation Framework for Long-Horizon Manipulation Skills</title>
+  <title>Robotic Ultra-Long-Horizon Manipulation Skills via Human-guided Lifelong Code Generation</title>
   <link rel="icon" type="image/x-icon" href="static/images/tum_icon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -82,31 +82,34 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Growing with Your Embodied Agent: A Human-in-the-Loop Lifelong Code Generation Framework for Long-Horizon Manipulation Skills</h1>
+            <h1 class="title is-1 publication-title">Robotic Ultra-Long-Horizon Manipulation Skills via Human-guided Lifelong Code Generation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a target="_blank">Yuan Meng</a><sup>1</sup>,</span>
+                <a target="_blank">Yuan Meng</a><sup>1,*</sup>,</span>
               <span class="author-block">
-                <a target="_blank">Zhenguo Sun</a><sup>2</sup>,</span>
+                <a target="_blank">Zhenguo Sun</a><sup>1,2,3,*,&dagger;</sup>,</span>
               <span class="author-block">
                 <a target="_blank">Max Fest</a><sup>1</sup>,</span>
               <span class="author-block">
-                <a target="_blank">Xukun Li</a><sup>1</sup>,</span>
+                <a target="_blank">Xiangtong Yao</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a target="_blank">Xukun Li</a><sup>1,2,3</sup>,</span>
               <br>
               <span class="author-block">
-                <a target="_blank">Zhenshan Bing</a><sup>3,&dagger;</sup>,</span>
+                <a target="_blank">Zhenshan Bing</a><sup>4,#</sup>,</span>
               <span class="author-block">
-                <a target="_blank">Anois Knoll</a><sup>1</sup>,</span>
+                <a target="_blank">Alois Knoll</a><sup>1</sup></span>
                     
                   </div>
 
                   <div class="is-size-5 publication-authors">
                     <span class="author-block">
-                      <small><sup>1</sup>School of Computation, Information and Technology, Technical University of Munich, Germany</small>
-                      <br><small><sup>2</sup>Beijing Academy of Artificial Intelligence (BAAI), Bejing, China</small>
-                      <br><small><sup>3</sup>State Key Laboratory for Novel Software Technology, Nanjing University, China</small>
-                      <br><small><sup>&dagger;</sup>Corresponding author: bing@nju.edu.cn</small>
+                      <small><sup>1</sup>School of Computation, Information and Technology, Technical University of Munich, 85748 Munich, Germany</small>
+                      <br><small><sup>2</sup>Beijing Academy of Artificial Intelligence (BAAI), 100084 Beijing, China</small>
+                      <br><small><sup>3</sup>XYZ Embodied AI, 100080 Beijing, China</small>
+                      <br><small><sup>4</sup>State Key Laboratory for Novel Software Technology, School of Intelligence Science and Technology, Nanjing University, 215163 Suzhou, China</small>
+                      <br><small><sup>*</sup>Equal contribution. <sup>&dagger;</sup>Project leader. <sup>#</sup>Corresponding author: <a href="mailto:bing@nju.edu.cn">bing@nju.edu.cn</a>.</small>
                     </span>
                     
                   </div>
@@ -136,7 +139,16 @@
                   </a>
                 </span>
 
-                  <!-- Github link -->
+                  <!-- Supplementary material link -->
+                  <span class="link-block">
+                    <a href="./LYRA-Supplementary.pdf" target="_blank" rel="noopener noreferrer"
+                    class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary Material</span>
+                    </a>
+                  </span>
                   
             </div>
           </div>
@@ -176,13 +188,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Large language models (LLMs)-based code generation for robotic manipulation has recently shown promise by directly translating human instructions into executable code, but existing approaches are limited by language ambiguity, noisy outputs, and limited context windows, which makes long-horizon tasks hard to solve.
-            While closed-loop feedback has been explored, approaches that rely solely on LLM guidance frequently fail in extremely long-horizon scenarios due to LLMs' limited reasoning capability in the robotic domain, where such issues are often simple for humans to identify.
-            Moreover, corrected knowledge is often stored in improper formats, restricting generalization and causing catastrophic forgetting, which highlights the need for learning reusable and extendable skills.
-            To address these issues, we propose a human-in-the-loop lifelong skill learning and code generation framework that encodes feedback into reusable skills and extends their functionality over time.
-            An external memory with Retrieval-Augmented Generation and a hint mechanism supports dynamic reuse, enabling robust performance on long-horizon tasks.
-            Experiments on Ravens, Franka Kitchen, and MetaWorld, as well as real-world settings, show that our framework achieves a 0.93 success rate (up to 27% higher than baselines) and a 42% efficiency improvement in feedback rounds. 
-            It can robustly solve extremely long-horizon tasks such as ``build a house'', which requires planning over 20 primitives.
+            Large language models (LLMs) can translate natural-language instructions for robotic manipulation into executable code, but ambiguity, noisy generations, and limited context windows make ultra-long-horizon tasks unreliable.
+            Closed-loop approaches that rely only on LLM feedback also struggle because LLMs have limited robotic reasoning, even when task errors are obvious to humans.
+            Feedback is often stored in representations that generalize poorly to unseen tasks and can cause catastrophic forgetting as new corrections accumulate.
+            We propose LYRA, a human-guided lifelong skill learning and code generation framework that distills human feedback into modular, reusable skills and incrementally extends their functionality across successive interactions while preserving previously learned behavior.
+            External memory stores learned skills and execution examples; retrieval-augmented generation selects relevant knowledge, while user hints guide reuse when retrieval is insufficient, supporting ultra-long-horizon execution.
+            Experiments on Ravens, Franka Kitchen, LIBERO-long, MetaWorld, and real-world tasks show a 0.93 success rate, up to 27% higher than baselines, and a 42% improvement in correction efficiency.
+            LYRA also robustly solves “build a house”, which requires planning over 20 primitives.
           </p>
         </div>
       </div>
@@ -444,7 +456,7 @@
         <br>
         <pre style="text-align:left; background:#f5f5f5; padding:20px; border-radius:5px;">
           @article{meng2025growing,
-            title={Growing with Your Embodied Agent: A Human-in-the-Loop Lifelong Code Generation Framework for Long-Horizon Manipulation Skills},
+            title={Growing with your embodied agent: A human-in-the-loop lifelong code generation framework for long-horizon manipulation skills},
             author={Meng, Yuan and Sun, Zhenguo and Fest, Max and Li, Xukun and Bing, Zhenshan and Knoll, Alois},
             journal={arXiv preprint arXiv:2509.18597},
             year={2025}

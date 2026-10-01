@@ -11,17 +11,18 @@ Official implementation of **LYRA**: A **L**ifelong learning code s**Y**nthesis 
 #### [[Project Website]](https://ghiara.github.io/LYRA/) [[Paper]](https://arxiv.org/abs/2509.18597)
 
 
-[Yuan Meng](https://github.com/Ghiara)<sup>1</sup>, [Zhenguo Sun](https://github.com/zhenshan-bing)<sup>2</sup>, [Max Fest]()<sup>1</sup>, [Xiangtong Yao]()<sup>1</sup>, [Xukun Li]()<sup>1</sup>,
+[Yuan Meng](https://github.com/Ghiara)<sup>1,*</sup>, [Zhenguo Sun](https://github.com/zhenshan-bing)<sup>1,2,3,*,&dagger;</sup>, [Max Fest]()<sup>1</sup>, [Xiangtong Yao]()<sup>1</sup>, [Xukun Li]()<sup>1,2,3</sup>,
 
-[Zhenshan Bing]()<sup>3,&dagger;</sup>, [Alois Knoll](https://www.ce.cit.tum.de/air/people/prof-dr-ing-habil-alois-knoll/)<sup>1</sup>.
+[Zhenshan Bing]()<sup>4,#</sup>, and [Alois Knoll](https://www.ce.cit.tum.de/air/people/prof-dr-ing-habil-alois-knoll/)<sup>1</sup>.
 
 </div>
 
 <p align="center">
-<small><sup>1</sup>School of Computation, Information and Technology, Technical University of Munich, Germany</small>
-<br><small><sup>2</sup>Beijing Academy of Artificial Intelligence (BAAI), China</small>
-<br><small><sup>3</sup>State Key Laboratory for Novel Software Technology, Nanjing University, China</small>
-<small><br><sup>&dagger;</sup>To whom correspondence should be addressed; E-mail: bing@nju.edu.cn</small>
+<small><sup>1</sup>School of Computation, Information and Technology, Technical University of Munich, 85748 Munich, Germany</small>
+<br><small><sup>2</sup>Beijing Academy of Artificial Intelligence (BAAI), 100084 Beijing, China</small>
+<br><small><sup>3</sup>XYZ Embodied AI, 100080 Beijing, China</small>
+<br><small><sup>4</sup>State Key Laboratory for Novel Software Technology, School of Intelligence Science and Technology, Nanjing University, 215163 Suzhou, China</small>
+<br><small><sup>*</sup>Equal contribution. <sup>&dagger;</sup>Project leader. <sup>#</sup>Corresponding author: <a href="mailto:bing@nju.edu.cn">bing@nju.edu.cn</a>.</small>
 </p>
 
 
