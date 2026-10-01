@@ -48,7 +48,7 @@ Experiments on Ravens, Franka Kitchen, LIBERO-long, MetaWorld, and real-world ta
 LYRA also robustly solves “build a house”, which requires planning over 20 primitives.
 
 <p align="center">
-  <img src="docs/imgs/lyra-overview.png" width="800"/>
+  <img src="docs/imgs/LYRA-overview.png" width="800"/>
 </p>
 
 ## 2. Installation
