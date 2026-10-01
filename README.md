@@ -8,12 +8,11 @@
 
 Official implementation of **LYRA**: A **L**ifelong learning code s**Y**nthesis framework with human-in-the-loop for **R**obotic long-horizon skill **A**cquisition
 
-#### [[Project Website]](https://ghiara.github.io/LYRA/) [[Paper]](https://arxiv.org/abs/2509.18597)
+#### [[Project Website]](https://ghiara.github.io/LYRA/) [[Paper]](https://arxiv.org/abs/2509.18597) [[Supplementary Material]](docs/LYRA-Supplementary.pdf)
 
 
-[Yuan Meng](https://github.com/Ghiara)<sup>1,*</sup>, [Zhenguo Sun](https://github.com/zhenshan-bing)<sup>1,2,3,*,&dagger;</sup>, [Max Fest]()<sup>1</sup>, [Xiangtong Yao]()<sup>1</sup>, [Xukun Li]()<sup>1,2,3</sup>,
-
-[Zhenshan Bing]()<sup>4,#</sup>, and [Alois Knoll](https://www.ce.cit.tum.de/air/people/prof-dr-ing-habil-alois-knoll/)<sup>1</sup>.
+<p><a href="https://github.com/Ghiara">Yuan Meng</a><sup>1,&#42;</sup>, <a href="https://github.com/zhenshan-bing">Zhenguo Sun</a><sup>1,2,3,&#42;,&dagger;</sup>, Max Fest<sup>1</sup>, Xiangtong Yao<sup>1</sup>, Xukun Li<sup>1,2,3</sup>,<br>
+Zhenshan Bing<sup>4,&#35;</sup>, and <a href="https://www.ce.cit.tum.de/air/people/prof-dr-ing-habil-alois-knoll/">Alois Knoll</a><sup>1</sup>.</p>
 
 </div>
 
@@ -22,7 +21,7 @@ Official implementation of **LYRA**: A **L**ifelong learning code s**Y**nthesis 
 <br><small><sup>2</sup>Beijing Academy of Artificial Intelligence (BAAI), 100084 Beijing, China</small>
 <br><small><sup>3</sup>XYZ Embodied AI, 100080 Beijing, China</small>
 <br><small><sup>4</sup>State Key Laboratory for Novel Software Technology, School of Intelligence Science and Technology, Nanjing University, 215163 Suzhou, China</small>
-<br><small><sup>*</sup>Equal contribution. <sup>&dagger;</sup>Project leader. <sup>#</sup>Corresponding author: <a href="mailto:bing@nju.edu.cn">bing@nju.edu.cn</a>.</small>
+<br><small><sup>&#42;</sup>Equal contribution. <sup>&dagger;</sup>Project leader. <sup>&#35;</sup>Corresponding author: <a href="mailto:bing@nju.edu.cn">bing@nju.edu.cn</a>.</small>
 </p>
 
 
